@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Games</title>
+  </head>
+  <body>
+    <div class="body-style">
+      <div class="header-top-section">
+        <div>
+          <p class="first-text-description">Добро пожаловать на мой сайт!</p>
+          <p class="secound-text-description">
+            Вам предстоит пройти несколько увлекательных игр. Если готов нажимай
+            <span class="secound-text-word">поехали</span> и
+            <span class="secound-text-word">приступай</span>!
+          </p>
+          <button class="header-button">Поехали</button>
+        </div>
+      </div>
+      <div class="image-game-display">
+        <div class="image-game-one"></div>
+        <div class="image-game-two"></div>
+        <div class="image-game-three"></div>
+      </div>
+      <div class="image-game-display-one">
+        <div>
+          <h1 class="season-title">Времена года!</h1>
+          <p class="season-subtitle">
+            Готов пройти испытание для настоящих знатоков сезонов? Введи число
+            от 1 до 12, и ты узнаешь, к какому времени года оно относится.
+            Удивительно, правда?
+          </p>
+          <input
+            type="number"
+            id="monthInput"
+            class="month-input"
+            placeholder="Ввод"
+            min="1"
+            max="12"
+          />
+          <button id="seasonButton" class="header-button-one">Играть!</button>
+          <div id="season-result" class="result-one"></div>
+        </div>
+        <div class="season-background"></div>
+      </div>
+      <div class="image-game-display-two">
+        <div class="guess-background"></div>
+        <div>
+          <h1 class="season-title">Запомни слова!</h1>
+          <p class="season-subtitle">
+            При нажатии на кнопку играть, вы увидите несколько слов, которые вам
+            необходимо запомнить.
+          </p>
+          <button class="header-button-two" onclick="startGame()">
+            Играть!
+          </button>
+          <div id="word-list" class="word-list-animation"></div>
+          <!-- Здесь будет показываться список слов -->
+          <div id="input-container" style="display: none">
+            <label
+              id="labelInputOne"
+              for="userInputOne"
+              class="input-label"
+            ></label>
+            <input type="text" id="userInputOne" />
+            <label
+              id="labelInputTwo"
+              for="userInputTwo"
+              class="input-label"
+            ></label>
+            <input type="text" id="userInputTwo" />
+            <button class="check-button" onclick="checkWords()">
+              Проверить!
+            </button>
+          </div>
+          <div id="memory-result" class="result-one"></div>
+          <div id="score" class="record-result"></div>
+        </div>
+      </div>
+      <div class="image-game-display-tree">
+        <div>
+          <h1 class="season-title">Игра в загадки</h1>
+          <p class="riddle-subtitle">
+            Вас ждут три загадки , вам необходимо их угадать, если вы дадите не
+            правильный ответ, то игра даст вам подсказку. Всего у вас будет две
+            подсказки. Удачи!
+          </p>
+          <button class="header-button-three" onclick="startRiddleGame()">
+            Играть!
+          </button>
+          <div id="riddle-game" style="display: none">
+            <p id="riddle-question" class="riddle-label"></p>
+            <input type="text" id="riddle-answer" placeholder="Ваш ответ" />
+            <button onclick="checkRiddleAnswer()" class="check-button-two">
+              Проверить ответ
+            </button>
+            <p id="riddle-feedback" class="input-label"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
