@@ -314,7 +314,7 @@ input[type="text"] {
   line-height: 32px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 430px) {
   .header-top-section {
     height: 740px;
   }
@@ -329,7 +329,8 @@ input[type="text"] {
   .riddle-label {
     padding-left: 20px;
     padding-right: 20px;
-    width: 280px;
+    padding-top: 20px;
+    width: 300px;
     font-size: 16px;
   }
 
@@ -382,22 +383,30 @@ input[type="text"] {
   .image-game-display-two {
     flex-direction: column;
     gap: 20px;
-    height: auto;
+    /* height: auto; */
     padding: 40px 20px;
   }
 
   .image-game-one,
   .image-game-two,
-  .image-game-three,
-  .guess-background {
+  .image-game-three {
     width: 100%;
     height: 200px;
     background-position: center;
   }
 
+  .guess-background {
+    background-image: url(Img/undraw_gaming_re_cma2122.png);
+    height: 256px;
+    width: 100%;
+    background-position: center;
+  }
+
   .image-game-display-tree {
-    padding: 40px 20px;
-    height: auto;
+    padding: 0px 20px;
+    /* height: auto; */
+    display: flex;
+    justify-content: flex-start;
   }
 
   #riddle-feedback {
