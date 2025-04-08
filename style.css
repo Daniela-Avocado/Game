@@ -242,6 +242,7 @@ input[type="text"] {
 }
 
 .word-list-animation {
+  max-width: 280px;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -311,4 +312,108 @@ input[type="text"] {
   font-size: 18px;
   color: #ffd700;
   line-height: 32px;
+}
+
+@media (max-width: 320px) {
+  .header-top-section {
+    height: 740px;
+  }
+
+  .first-text-description,
+  .secound-text-description,
+  .season-title,
+  .season-subtitle,
+  .input-label,
+  .record-result,
+  .riddle-subtitle,
+  .riddle-label {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 280px;
+    font-size: 16px;
+  }
+
+  .first-text-description {
+    font-size: 28px;
+    padding-top: 100px;
+  }
+
+  .secound-text-description,
+  .season-subtitle,
+  .riddle-subtitle {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .season-title {
+    font-size: 28px;
+  }
+
+  .header-button,
+  .header-button-one,
+  .header-button-two,
+  .header-button-three,
+  .check-button,
+  .check-button-two {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 200px;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .month-input,
+  input[type="text"] {
+    margin-left: 20px;
+    margin-right: 20px;
+    /* width: calc(100% - 40px); */
+    font-size: 16px;
+  }
+
+  #word-list {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .image-game-display,
+  .image-game-display-one,
+  .image-game-display-two {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .image-game-one,
+  .image-game-two,
+  .image-game-three,
+  .guess-background {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+  }
+
+  .image-game-display-tree {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  #riddle-feedback {
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .word-list-animation {
+    width: 280px;
+  }
+
+  .result-one {
+    padding: 20px 0px 20px 20px;
+  }
+
+  .season-background {
+    height: 0px;
+  }
 }
